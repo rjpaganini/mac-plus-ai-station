@@ -1,0 +1,32 @@
+{
+  "name": "tinos-computer",
+  "version": "1.0.0",
+  "description": "Child-friendly UI for Tino's Computer",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RJ (Tino's father)",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "electron": "^24.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "dependencies": {
+    "electron-store": "^8.1.0"
+  },
+  "build": {
+    "appId": "com.tinos.computer",
+    "productName": "Tino's Computer",
+    "directories": {
+      "output": "dist"
+    },
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "category": "Utility"
+    }
+  }
+}

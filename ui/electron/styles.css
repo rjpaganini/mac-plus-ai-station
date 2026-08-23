@@ -1,0 +1,310 @@
+/* Tino's Computer UI Styles */
+
+/* Base styles and reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+}
+
+body {
+    background-color: #E6F2FF; /* Soft blue background */
+    color: #333;
+    height: 100vh;
+    overflow: hidden;
+    user-select: none; /* Prevent text selection for better touch experience */
+    -webkit-user-select: none;
+}
+
+.container {
+    max-width: 1280px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header with clock and weather */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clock-container {
+    text-align: center;
+}
+
+.time {
+    font-size: 48px;
+    font-weight: bold;
+    color: #4285F4; /* Bright blue */
+}
+
+.date {
+    font-size: 24px;
+    color: #34A853; /* Teal */
+}
+
+.weather-container {
+    text-align: center;
+}
+
+.weather-icon {
+    font-size: 48px;
+}
+
+.temperature {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Main app grid */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.app-button {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    aspect-ratio: 1 / 1;
+}
+
+.app-button:hover, .app-button:active {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.app-icon {
+    font-size: 64px;
+    margin-bottom: 10px;
+}
+
+.app-label {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Music button */
+#music-button {
+    background-color: #FFCDD2; /* Light red */
+}
+
+/* Stories button */
+#stories-button {
+    background-color: #C8E6C9; /* Light green */
+}
+
+/* Games button */
+#games-button {
+    background-color: #BBDEFB; /* Light blue */
+}
+
+/* Settings button */
+#settings-button {
+    background-color: #D1C4E9; /* Light purple */
+}
+
+/* Section styles (Music, Stories, Games, Settings) */
+.section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #E6F2FF;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.section.hidden {
+    display: none;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+}
+
+/* Music player styles */
+.music-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.album-art {
+    width: 300px;
+    height: 300px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.album-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.song-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.song-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.artist {
+    font-size: 20px;
+    color: #666;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.player-controls button {
+    background: none;
+    border: none;
+    font-size: 48px;
+    cursor: pointer;
+}
+
+/* Stories grid */
+.stories-grid, .games-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    flex: 1;
+}
+
+.story-item, .game-item {
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Settings styles */
+.settings-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.pin-entry {
+    text-align: center;
+}
+
+.pin-entry h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#pin-input {
+    width: 200px;
+    height: 60px;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 2px solid #4285F4;
+    border-radius: 10px;
+    letter-spacing: 10px;
+}
+
+.numpad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.num-button {
+    background-color: white;
+    border: 2px solid #4285F4;
+    border-radius: 10px;
+    font-size: 24px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.num-button:hover {
+    background-color: #E6F2FF;
+}
+
+.num-button.clear {
+    background-color: #FBBC05; /* Yellow */
+}
+
+.num-button.enter {
+    background-color: #34A853; /* Green */
+    color: white;
+}
+
+/* Utility classes */
+.hidden {
+    display: none !important;
+}

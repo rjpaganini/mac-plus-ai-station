@@ -1,0 +1,19 @@
+[Unit]
+Description=Tino's Computer UI
+After=network.target
+
+[Service]
+Type=simple
+User=tinopaganini
+WorkingDirectory=/home/tinopaganini/tinos-computer
+ExecStart=/bin/bash -c 'cd /home/tinopaganini/tinos-computer && ./scripts/start-ui.sh'
+Restart=on-failure
+RestartSec=5
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=tinos-computer
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/tinopaganini/.Xauthority
+
+[Install]
+WantedBy=graphical.target
