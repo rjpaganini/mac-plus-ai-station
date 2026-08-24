@@ -1,7 +1,7 @@
 # mac-plus-ai-station
 
 **A 1984 Macintosh Plus shell, gutted and rebuilt into a voice-driven AI station for my
-six-year-old.** Weather, music, photos, and a talking assistant — behind the original
+six-year-old.** Weather, music, photos, and a talking assistant, behind the original
 beige and the original bezel.
 
 ```console
@@ -21,7 +21,7 @@ $ system --info
 ## Why
 
 I wanted my son to have a computer that felt like *an object* rather than a rectangle of
-glass — something with a shape, a weight, and a history. The Mac Plus was the machine
+glass, something with a shape, a weight, and a history. The Mac Plus was the machine
 that taught a generation what a personal computer was. Putting a voice assistant inside
 one felt like the right kind of joke.
 
@@ -34,7 +34,7 @@ cutting the shell.
 ## The hard part was millimeters, not software
 
 The Waveshare panel's body is 239 × 147mm. The Mac Plus front aperture leaves **under
-1mm of tolerance** on the width. There is no adjusting after the fact — the bezel either
+1mm of tolerance** on the width. There is no adjusting after the fact. The bezel either
 lands or the whole faceplate reads as wrong.
 
 ```console
@@ -64,7 +64,7 @@ finish. The 3D approach was solving a problem I didn't actually have.
 
 **Vendors want DXF, not raw SVG.** Raw SVGs arrived corrupted. Send compressed or DXF.
 
-**Check fill and stroke before export.** The vendor's preview showed cut paths reversed —
+**Check fill and stroke before export.** The vendor's preview showed cut paths reversed:
 an Illustrator fill/stroke issue that would have cut the aperture as the keep and the
 frame as the waste. Caught it in preview, not in acrylic.
 
@@ -79,7 +79,7 @@ $ tree -L 1
   project_management/ .... plan, progress, risk log, design notes
   scripts/ ............... environment setup, service install, UI launch
   systemd/ ............... kiosk service unit
-  ui/ .................... three UI spikes — kivy, electron, pyqt
+  ui/ .................... three UI spikes: kivy, electron, pyqt
 ```
 
 `ui/` holds three parallel attempts at the interface. They're kept rather than deleted
@@ -91,7 +91,7 @@ Electron was the fastest to make *look* right, PyQt sat between them.
 ## Notes
 
 - Power routing needs planning. Speakers plus mic on the same bus will brown out the
-  hub — use a powered one.
+  hub. Use a powered one.
 - The display needs 12V DC for the panel and USB for touch. That's two cables into a
   chassis with one hole.
 - All network addresses and hostnames in this repo are documentation placeholders.
